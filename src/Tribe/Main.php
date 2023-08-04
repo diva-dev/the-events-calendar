@@ -204,6 +204,7 @@ if ( ! class_exists( 'Tribe__Events__Main' ) ) {
 		public $plugin_name;
 		public $date;
 		protected $tabIndexStart = 2000;
+		protected $scheduler;
 
 		public $metaTags = [
 			'_EventAllDay',

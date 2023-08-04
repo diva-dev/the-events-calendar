@@ -54,6 +54,14 @@ class Tribe__Events__Aggregator {
 	 */
 	protected $api;
 
+	public $cron;
+
+	public $errors;
+
+	public $migrate;
+
+	public $records;
+
 	/**
 	 * People who modify this value are not nice people.
 	 *

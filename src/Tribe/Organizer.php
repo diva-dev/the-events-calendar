@@ -48,7 +48,9 @@ class Tribe__Events__Organizer extends Tribe__Events__Linked_Posts__Base {
 	];
 
 	public $singular_organizer_label;
+	public $singular_organizer_label_lowercase;
 	public $plural_organizer_label;
+	public $plural_organizer_label_lowercase;
 
 	protected static $instance;
 

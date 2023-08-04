@@ -50,6 +50,8 @@ class Classic_Editor {
 	 */
 	protected $admin_template;
 
+	protected $context;
+
 	/**
 	 * Metabox constructor.
 	 *

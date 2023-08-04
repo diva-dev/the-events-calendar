@@ -81,7 +81,17 @@ class Tribe__Events__Venue extends Tribe__Events__Linked_Posts__Base {
 	/**
 	 * @var string
 	 */
+	public $singular_venue_label_lowercase;
+
+	/**
+	 * @var string
+	 */
 	public $plural_venue_label;
+
+	/**
+	 * @var string
+	 */
+	public $plural_venue_label_lowercase;
 
 	/**
 	 * @var Tribe__Events__Venue
