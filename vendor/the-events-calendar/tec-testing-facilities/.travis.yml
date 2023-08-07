@@ -1,0 +1,21 @@
+language: php
+php:
+  - 7.0
+
+services:
+  - mysql
+
+before_install:
+  # Install version 1 of Composer.
+  - composer self-update --rollback
+  - mysql -e 'CREATE DATABASE IF NOT EXISTS test;'
+
+install:
+  - composer update
+  - composer run wp-install
+  - composer run wp-empty
+  - composer run wp-db-dump
+
+script:
+  - composer run code-sniff
+  - composer run test

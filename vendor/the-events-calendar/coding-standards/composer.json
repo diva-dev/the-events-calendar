@@ -1,0 +1,50 @@
+{
+    "name": "the-events-calendar/coding-standards",
+    "description": "Code sniffing rules for The Events Calendar products",
+    "type": "phpcodesniffer-standard",
+    "license": "GPL-3.0+",
+    "keywords": [
+        "phpcs",
+        "standards",
+        "WordPress"
+    ],
+    "authors": [
+        {
+            "name": "The Events Calendar",
+            "email": "vendors@theeventscalendar.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.6",
+        "squizlabs/php_codesniffer": "^3.3.1",
+        "wp-coding-standards/wpcs": "^2.1"
+    },
+    "require-dev": {
+        "dealerdirect/phpcodesniffer-composer-installer": "^0.5",
+        "phpcompatibility/php-compatibility": "^9"
+    },
+    "suggest": {
+        "dealerdirect/phpcodesniffer-composer-installer": "^0.5 || This Composer plugin will sort out the PHPCS 'installed_paths' automatically."
+    },
+    "scripts": {
+        "install-codestandards": "Dealerdirect\\Composer\\Plugin\\Installers\\PHPCodeSniffer\\Plugin::run",
+        "ruleset": "bin/ruleset-tests",
+        "lint": [
+            "bin/php-lint",
+            "bin/xml-lint"
+        ],
+        "phpcs": "bin/phpcs",
+        "phpunit": "bin/unit-tests",
+        "test": [
+            "@lint",
+            "@ruleset",
+            "@phpunit",
+            "@phpcs"
+        ]
+    },
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    }
+}
