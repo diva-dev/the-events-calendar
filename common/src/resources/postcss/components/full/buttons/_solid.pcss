@@ -1,0 +1,110 @@
+.tribe-common {
+	/* -----------------------------------------------------------------------------
+	 *
+	 * Button: Solid
+	 *
+	 * Example:
+	 * <button class="tribe-common-c-btn">...</button>
+	 * <a href="#" class="tribe-common-c-btn">...</a>
+	 *
+	 * ----------------------------------------------------------------------------- */
+
+	.tribe-common-c-btn,
+	a.tribe-common-c-btn,
+	button.tribe-common-c-btn {
+		@mixin button-solid;
+
+		background-color: var(--tec-color-button-primary);
+		padding: 11px 20px 11px;
+		width: 100%;
+
+		&,
+		&:hover,
+		&:focus {
+			background-image: none;
+			border: 0;
+			border-radius: var(--tec-border-radius-default);
+			box-shadow: none;
+			color: var(--tec-color-background);
+			font-style: normal;
+			outline: none;
+			text-decoration: none;
+			text-shadow: none;
+		}
+
+		.tribe-common--breakpoint-medium& {
+			width: auto;
+		}
+
+		&:focus,
+		&:hover {
+			background-color: var(--tec-color-button-primary-hover);
+			padding: 11px 20px 11px;
+		}
+
+		&:active {
+			background-color: var(--tec-color-button-primary-active);
+			padding: 11px 20px 11px;
+		}
+
+		&:disabled {
+			background-color: var(--tec-color-button-primary-background);
+			padding: 11px 20px 11px;
+		}
+	}
+
+	/* -------------------------------------------------------------------------
+	 *
+	 * Button: Solid - Theme Overrides
+	 *
+	 * ------------------------------------------------------------------------- */
+
+	/* -------------------------------------------------------------------------
+	 * Theme Overrides - Twenty Seventeen
+	 * ------------------------------------------------------------------------- */
+
+	.tribe-theme-twentyseventeen & {
+
+		.tribe-common-c-btn {
+
+			&:hover,
+			&:focus {
+				background-color: var(--tec-color-button-primary-hover);
+				color: var(--tec-color-background);
+			}
+		}
+	}
+
+	/* -------------------------------------------------------------------------
+	 * Theme Overrides - Twenty Twenty
+	 * ------------------------------------------------------------------------- */
+
+	.tribe-theme-twentytwenty & {
+
+		.tribe-common-c-btn {
+			background-color: var(--tec-color-button-primary);
+
+			&:hover,
+			&:focus {
+				background-color: var(--tec-color-button-primary-hover);
+				color: var(--tec-color-background);
+			}
+		}
+	}
+
+	/* -------------------------------------------------------------------------
+	 * Theme Overrides - Twenty TwentyOne
+	 * ------------------------------------------------------------------------- */
+
+	.tribe-theme-twentytwentyone & {
+
+		.tribe-common-c-btn {
+			outline: none;
+
+			&:not(:hover):not(:active) {
+				background-color: var(--tec-color-button-primary);
+				color: var(--tec-color-background);
+			}
+		}
+	}
+}

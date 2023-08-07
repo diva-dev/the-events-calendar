@@ -1,0 +1,37 @@
+.tribe-common {
+	/* -----------------------------------------------------------------------------
+	 *
+	 * Button: Icon
+	 *
+	 * Example:
+	 * <button class="tribe-common-c-btn-icon tribe-common-c-btn-icon--filter">...</button>
+	 * <a href="#" class="tribe-common-c-btn-icon tribe-common-c-btn-icon--filter">...</a>
+	 *
+	 * ----------------------------------------------------------------------------- */
+
+	.tribe-common-c-btn-icon {
+
+		&:before {
+			background-repeat: no-repeat;
+			background-size: contain;
+			content: '';
+			display: block;
+		}
+	}
+
+	/* -----------------------------------------------------------------------------
+	 * Button: Icon Caret Left/Right
+	 * ----------------------------------------------------------------------------- */
+
+	.tribe-common-c-btn-icon--caret-left,
+	.tribe-common-c-btn-icon--caret-right {
+
+		.tribe-common-c-btn-icon__icon-svg {
+			width: 11px;
+
+			path {
+				fill: currentColor;
+			}
+		}
+	}
+}

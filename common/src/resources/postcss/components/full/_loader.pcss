@@ -1,0 +1,42 @@
+.tribe-common {
+	/* -----------------------------------------------------------------------------
+	 *
+	 * Component: Loader
+	 *
+	 *
+	 * Example:
+	 * <div class="tribe-events-view-loader__dots tribe-common-c-loader">
+	 *    <?php $this->template( 'components/icons/dot', [ 'classes' => [ 'tribe-common-c-loader__dot tribe-common-c-loader__dot--first' ] ] ); ?>
+	 *    <?php $this->template( 'components/icons/dot', [ 'classes' => [ 'tribe-common-c-loader__dot tribe-common-c-loader__dot--second' ] ] ); ?>
+	 *    <?php $this->template( 'components/icons/dot', [ 'classes' => [ 'tribe-common-c-loader__dot tribe-common-c-loader__dot--third' ] ] ); ?>
+	 * </div>
+	 *
+	 * ----------------------------------------------------------------------------- */
+
+	.tribe-common-c-loader__dot circle {
+		animation-direction: normal;
+		animation-duration: 2.24s;
+		animation-iteration-count: infinite;
+		animation-name: tribe-common-c-loader-bounce;
+		fill: currentColor;
+		opacity: var(--tec-opacity-background);
+	}
+
+	.tribe-common-c-loader__dot--first circle {
+		animation-delay: 0.45s;
+	}
+
+	.tribe-common-c-loader__dot--second circle {
+		animation-delay: 1.05s;
+	}
+
+	.tribe-common-c-loader__dot--third circle {
+		animation-delay: 1.35s;
+	}
+
+	@keyframes tribe-common-c-loader-bounce {
+		50% {
+			opacity: var(--tec-opacity-default);
+		}
+	}
+}

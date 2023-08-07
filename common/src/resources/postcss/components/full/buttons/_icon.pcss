@@ -1,0 +1,96 @@
+.tribe-common {
+	/* -----------------------------------------------------------------------------
+	 *
+	 * Button: Icon
+	 *
+	 * Example:
+	 * <button class="tribe-common-c-btn-icon tribe-common-c-btn-icon--filter">...</button>
+	 * <a href="#" class="tribe-common-c-btn-icon tribe-common-c-btn-icon--filter">...</a>
+	 *
+	 * ----------------------------------------------------------------------------- */
+
+	.tribe-common-c-btn-icon {
+		@mixin button-global;
+	}
+
+	/* -----------------------------------------------------------------------------
+	 * Button: Icon Caret Left/Right
+	 * ----------------------------------------------------------------------------- */
+
+	.tribe-common-c-btn-icon--caret-left,
+	.tribe-common-c-btn-icon--caret-right {
+
+		&:active,
+		&:hover,
+		&:focus {
+
+			.tribe-common-c-btn-icon__icon-svg path {
+				fill: var(--tec-color-icon-primary);
+			}
+		}
+
+		&:disabled {
+
+			.tribe-common-c-btn-icon__icon-svg path {
+				fill: var(--tec-color-icon-disabled);
+			}
+		}
+
+		.tribe-common-c-btn-icon__icon-svg {
+
+			path {
+				fill: var(--tec-color-icon-secondary);
+			}
+		}
+	}
+
+	/* -----------------------------------------------------------------------------
+	 *
+	 * Button: Icon Border
+	 *
+	 * Example:
+	 * <button class="tribe-common-c-btn-icon tribe-common-c-btn-icon--border tribe-common-c-btn-icon--filter">...</button>
+	 * <a href="#" class="tribe-common-c-btn-icon tribe-common-c-btn-icon--border tribe-common-c-btn-icon--filter">...</a>
+	 *
+	 * ----------------------------------------------------------------------------- */
+
+	.tribe-common-c-btn-icon--border {
+		@mixin button-icon-border;
+	}
+
+	/* -----------------------------------------------------------------------------
+	 * Button: Icon Caret Left
+	 * ----------------------------------------------------------------------------- */
+
+	/* -----------------------------------------------------------------------------
+	 * Button: Icon Caret Right
+	 * ----------------------------------------------------------------------------- */
+
+	/* -----------------------------------------------------------------------------
+	 * Button: Icon Filters
+	 * ----------------------------------------------------------------------------- */
+
+	/* -----------------------------------------------------------------------------
+	 * Button: Icon Search
+	 * ----------------------------------------------------------------------------- */
+
+	/* -------------------------------------------------------------------------
+	 *
+	 * Button: Icon Border - Theme Overrides
+	 *
+	 * ------------------------------------------------------------------------- */
+
+	/* -------------------------------------------------------------------------
+	 * Theme Overrides - Twenty Seventeen
+	 * ------------------------------------------------------------------------- */
+
+	.tribe-theme-twentyseventeen & {
+
+		.tribe-common-c-btn-icon--border {
+
+			&:hover {
+				background-color: var(--tec-color-background);
+			}
+		}
+	}
+}

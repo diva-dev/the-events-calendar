@@ -1,0 +1,117 @@
+.tribe-common {
+	/* -----------------------------------------------------------------------------
+	 *
+	 * Form Control: Toggles
+	 *
+	 * Example (Horizontal):
+	 * <div class="tribe-common-form-control-toggle">
+	 *   <input
+	 *     class="tribe-common-form-control-toggle__input"
+	 *     id="toggleOne"
+	 *     name="toggleGroup"
+	 *     type="checkbox"
+	 *     value="toggleOne"
+	 *   />
+	 *   <label class="tribe-common-form-control-toggle__label" for="toggleOne">Toggle One</label>
+	 * </div>
+	 *
+	 * Example (Vertical):
+	 * <div class="tribe-common-form-control-toggle tribe-common-form-control-toggle--vertical">
+	 *   <label class="tribe-common-form-control-toggle__label" for="toggleOne">Toggle One</label>
+	 *   <input
+	 *     class="tribe-common-form-control-toggle__input"
+	 *     id="toggleOne"
+	 *     name="toggleGroup"
+	 *     type="checkbox"
+	 *     value="toggleOne"
+	 *   />
+	 * </div>
+	 *
+	 * ----------------------------------------------------------------------------- */
+
+	.tribe-common-form-control-toggle {
+		line-height: 0;
+		position: relative;
+	}
+
+	.tribe-common-form-control-toggle__input {
+		@mixin form-control-slider-toggle-track;
+
+		appearance: none;
+		background-color: var(--tec-form-color-border-secondary);
+		width: 40px;
+
+		&::-ms-check {
+			display: none;
+		}
+
+		+ label:before {
+			@mixin form-control-slider-toggle-thumb;
+
+			content: '';
+			left: 0;
+			position: absolute;
+			top: 0;
+			transition: var(--tec-transition-transform);
+		}
+
+		&:checked {
+			background-color: var(--tec-form-color-accent-primary);
+
+			+ label:before {
+				transform: translateX(20px);
+			}
+		}
+	}
+
+	.tribe-common-form-control-toggle__label {
+		@mixin desktop-body-3;
+
+		color: var(--tec-color-text-secondary);
+	}
+
+	/* -----------------------------------------------------------------------------
+	 *
+	 * Form Control: Toggles Theme Overrides
+	 *
+	 * ----------------------------------------------------------------------------- */
+
+	/* -----------------------------------------------------------------------------
+	 * Theme Overrides - Enfold
+	 * ----------------------------------------------------------------------------- */
+
+	#top.tribe-theme-enfold &,
+	#top .main_color & {
+
+		.tribe-common-form-control-toggle__label {
+			font-size: var(--tec-font-size-1);
+			font-weight: var(--tec-font-weight-regular);
+		}
+	}
+
+	/* -------------------------------------------------------------------------
+	 * Theme Overrides - Twenty Twenty
+	 * ------------------------------------------------------------------------- */
+
+	.tribe-theme-twentytwenty & {
+
+		.tribe-common-form-control-toggle__input {
+			top: 0;
+		}
+
+		.tribe-common-form-control-toggle__input:checked:before {
+			content: none;
+		}
+	}
+
+	/* -------------------------------------------------------------------------
+	 * Theme Overrides - Twenty Twentyone
+	 * ------------------------------------------------------------------------- */
+
+	.tribe-theme-twentytwentyone & {
+
+		.tribe-common-form-control-toggle__input:after {
+			display: none; /* Prevents theme adding a check mark to the toggle */
+		}
+	}
+}

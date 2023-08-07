@@ -1,0 +1,56 @@
+.tribe-common {
+	/* -----------------------------------------------------------------------------
+	 *
+	 * Component: SVGIcon
+	 *
+	 * Example:
+	 * <?php $this->template('components/icons/[name]') ?>
+	 *
+	 * ----------------------------------------------------------------------------- */
+
+	.tribe-common-c-svgicon {
+		color: var(--tec-color-accent-primary);
+	}
+
+	.tribe-common-c-svgicon--featured {
+
+		path {
+			fill: currentColor;
+		}
+	}
+
+	.tribe-common-c-svgicon--recurring {
+
+		path {
+			fill: var(--tec-color-icon-active);
+			stroke: var(--tec-color-icon-active);
+		}
+	}
+
+	.tribe-common-c-svgicon--close,
+	.tribe-common-c-svgicon--close-alt {
+
+		path {
+			stroke: var(--tec-color-icon-secondary);
+		}
+	}
+
+	.tribe-common-c-svgicon--messages-not-found {
+
+		path {
+			stroke: var(--tec-color-icon-active);
+		}
+
+		.tribe-common-c-svgicon__svg-stroke {
+			stroke: currentColor;
+		}
+	}
+
+	.tribe-common-c-svgicon__svg-fill {
+		fill: var(--tec-color-icon-active);
+	}
+
+	.tribe-common-c-svgicon__svg-stroke {
+		stroke: var(--tec-color-icon-active);
+	}
+}

@@ -1,0 +1,148 @@
+.tribe-common {
+	/* -----------------------------------------------------------------------------
+	 *
+	 * Form Control: Checkboxes & Radios
+	 *
+	 * Example (Checkboxes):
+	 * <fieldset>
+	 *   <legend>Legend for Checkboxes</legend>
+	 *   <div class="tribe-common-form-control-checkbox-radio-group">
+	 *     <div class="tribe-common-form-control-checkbox">
+	 *       <input
+	 *         class="tribe-common-form-control-checkbox__input"
+	 *         id="checkboxOne"
+	 *         name="checkboxGroup"
+	 *         type="checkbox"
+	 *         value="checkboxOne"
+	 *         checked="checked"
+	 *       />
+	 *       <label
+	 *         class="tribe-common-form-control-checkbox__label"
+	 *         for="checkboxOne"
+	 *       >
+	 *         Checkbox One
+	 *       </label>
+	 *     </div>
+	 *     <div class="tribe-common-form-control-checkbox">
+	 *       <input
+	 *         class="tribe-common-form-control-checkbox__input"
+	 *         id="checkboxTwo"
+	 *         name="checkboxGroup"
+	 *         type="checkbox"
+	 *         value="checkboxTwo"
+	 *       />
+	 *       <label
+	 *         class="tribe-common-form-control-checkbox__label"
+	 *         for="checkboxTwo"
+	 *       >
+	 *         Checkbox Two
+	 *       </label>
+	 *     </div>
+	 *   </div>
+	 * </fieldset>
+	 *
+	 * Example (Radios):
+	 * <div class="tribe-common-form-control-checkbox-radio-group">
+	 *   <div class="tribe-common-form-control-radio">
+	 *     <input
+	 *       class="tribe-common-form-control-radio__input"
+	 *       id="radioExample"
+	 *       name="radioExample"
+	 *       type="radio"
+	 *       value="RadioExample"
+	 *       checked="checked"
+	 *     />
+	 *     <label
+	 *       class="tribe-common-form-control-radio__label"
+	 *       for="radioExample"
+	 *     >
+	 *       Radio Example
+	 *     </label>
+	 *   </div>
+	 * </div>
+	 *
+	 * ----------------------------------------------------------------------------- */
+
+	.tribe-common-form-control-checkbox,
+	.tribe-common-form-control-radio {
+		align-items: flex-start;
+		display: flex;
+	}
+
+	.tribe-common-form-control-checkbox__label,
+	.tribe-common-form-control-radio__label {
+		cursor: pointer;
+		margin-left: 15px;
+	}
+
+	.tribe-common-form-control-checkbox__input,
+	.tribe-common-form-control-radio__input {
+		cursor: pointer;
+		flex: none;
+		margin: 1px 0 0;
+	}
+
+	/* -----------------------------------------------------------------------------
+	 * Form Control: Checkboxes
+	 * ----------------------------------------------------------------------------- */
+
+	/* -----------------------------------------------------------------------------
+	 * Form Control: Radios
+	 * ----------------------------------------------------------------------------- */
+
+	/* -----------------------------------------------------------------------------
+	 *
+	 * Form Control: Checkboxes & Radios Theme Overrides
+	 *
+	 * ----------------------------------------------------------------------------- */
+
+	/* -----------------------------------------------------------------------------
+	 * Form Control: Checkboxes Theme Overrides
+	 * ----------------------------------------------------------------------------- */
+
+	/* -----------------------------------------------------------------------------
+	 * Theme Overrides - Enfold
+	 * ----------------------------------------------------------------------------- */
+
+	#top.tribe-theme-enfold &,
+	#top .main_color & {
+
+		.tribe-common-form-control-checkbox__input {
+			margin: 1px 0 0;
+		}
+	}
+
+	/* -------------------------------------------------------------------------
+	 * Theme Overrides - Twenty Twenty
+	 * ------------------------------------------------------------------------- */
+
+	.tribe-theme-twentytwenty & {
+
+		.tribe-common-form-control-checkbox__input {
+			top: 0;
+		}
+	}
+
+	/* -------------------------------------------------------------------------
+	 * Theme Overrides - Twenty TwentyOne
+	 * ------------------------------------------------------------------------- */
+
+	.tribe-theme-twentytwentyone & {
+
+		.tribe-common-form-control-checkbox__input {
+			&:checked:after {
+				border: none;
+			}
+		}
+
+		.tribe-common-form-control-radio__input {
+			&:checked:after {
+				background-color: transparent;
+			}
+		}
+	}
+
+	/* -----------------------------------------------------------------------------
+	 * Form Control: Radios Theme Overrides
+	 * ----------------------------------------------------------------------------- */
+}

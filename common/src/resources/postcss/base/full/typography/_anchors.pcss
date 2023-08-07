@@ -1,0 +1,136 @@
+.tribe-common {
+
+	a {
+		color: var(--tec-color-text-primary);
+		outline: 0;
+		text-decoration: none;
+
+		&:hover,
+		&:focus,
+		&:active,
+		&:visited {
+			color: var(--tec-color-text-primary);
+			outline: 0;
+			text-decoration: none;
+		}
+
+		/* -------------------------------------------------------------------------
+		 *
+		 * Anchor: Theme Overrides
+		 *
+		 * ------------------------------------------------------------------------- */
+
+		/* -------------------------------------------------------------------------
+		 * Theme Overrides - Twenty Seventeen
+		 * ------------------------------------------------------------------------- */
+
+		.tribe-theme-twentyseventeen &,
+		.tribe-theme-twentyseventeen .site-footer .widget-area &,
+		.site-footer .widget-area & {
+			box-shadow: none;
+
+			&:hover,
+			&:focus {
+				box-shadow: none;
+				color: var(--tec-color-text-primary);
+			}
+		}
+
+		/* -------------------------------------------------------------------------
+		 * Theme Overrides - Twenty Nineteen
+		 * ------------------------------------------------------------------------- */
+
+		.tribe-theme-twentynineteen &,
+		.tribe-theme-twentynineteen .entry & {
+			text-decoration: none;
+		}
+
+		/* -------------------------------------------------------------------------
+		 * Theme Overrides - Twenty Twentyone
+		 * ------------------------------------------------------------------------- */
+
+		.tribe-theme-twentytwentyone &,
+		.tribe-theme-twentytwentyone .entry & {
+			text-decoration: none;
+		}
+
+		/* -------------------------------------------------------------------------
+		 * Theme Overrides - Enfold
+		 * ------------------------------------------------------------------------- */
+
+		.tribe-theme-enfold &,
+		.main_color .sidebar & {
+			color: var(--tec-color-text-primary);
+
+			&:hover,
+			&:focus,
+			&:active,
+			&:visited {
+				color: var(--tec-color-text-primary);
+			}
+		}
+	}
+
+	/* -------------------------------------------------------------------------
+	 *
+	 * Anchor
+	 *
+	 * Example:
+	 * <a class="tribe-common-anchor">Anchor Text</a>
+	 * <a class="tribe-common-anchor-alt">Anchor Alt Text</a>
+	 * <a class="tribe-common-anchor-thin">Anchor Thin Text</a>
+	 *
+	 * ------------------------------------------------------------------------- */
+
+	.tribe-common-anchor {
+		@mixin anchor-default;
+	}
+
+	.tribe-common-anchor-alt {
+		@mixin anchor-alt;
+	}
+
+	.tribe-common-anchor-thin {
+		@mixin anchor-thin;
+	}
+
+	.tribe-common-anchor-thin-alt {
+		@mixin anchor-thin-alt;
+	}
+
+	/* -------------------------------------------------------------------------
+	 *
+	 * Anchor: Theme Overrides
+	 *
+	 * ------------------------------------------------------------------------- */
+
+	/* -------------------------------------------------------------------------
+	 * Theme Overrides - Twenty Seventeen
+	 * ------------------------------------------------------------------------- */
+
+	.tribe-theme-twentyseventeen & {
+
+		.tribe-common-anchor-alt,
+		.tribe-common-anchor-thin-alt {
+
+			&:hover,
+			&:focus {
+				color: var(--tec-color-accent-primary);
+			}
+		}
+	}
+
+	.tribe-theme-twentyseventeen .site-footer .widget-area &,
+	.site-footer .widget-area & {
+
+		.tribe-common-anchor,
+		.tribe-common-anchor-thin {
+			transition: var(--tec-transition-border-color);
+		}
+
+		.tribe-common-anchor-alt,
+		.tribe-common-anchor-thin-alt {
+			transition: var(--tec-transition-color);
+		}
+	}
+}
